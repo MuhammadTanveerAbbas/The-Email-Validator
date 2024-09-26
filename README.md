@@ -15,7 +15,6 @@
 ###
 
 <h1 align="center">📧 Email Validator</h1>
-
 <h2 align="left">🤖 Introduction</h2>
 
 ###
