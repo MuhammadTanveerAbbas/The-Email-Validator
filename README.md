@@ -12,9 +12,9 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge" height="40" alt="javascript logo"  />
 </div>
 
-###
 
 <h1 align="center">📧 Email Validator</h1>
+
 <h2 align="left">🤖 Introduction</h2>
 
 ###
