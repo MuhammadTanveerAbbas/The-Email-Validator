@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 12px;
+    color: white;
+}
+
+nav .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+nav .logo img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+nav .logo span {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #808080;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.container input,
+.container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.container input:focus,
+.container textarea:focus {
+    border-color: #808080;
+}
+
+.container .btn {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.container .btn:hover {
+    background-color: #333;
+}
+
+#resultCont {
+    margin-top: 20px;
+    font-size: 16px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 600px) {
+    html, body {
+        overflow: auto; /* Enable scroll on mobile */
+        height: auto; /* Allow content to grow */
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        justify-content: space-evenly;
+        margin: 0 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 1.2em;
+    }
+
+    .container input,
+    .container textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .container .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet responsiveness */
+@media only screen and (max-width: 768px) {
+    html, body {
+        overflow: auto; /* Enable scroll on tablets */
+        height: auto; /* Allow content to grow */
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    .container h1 {
+        font-size: 1.5em;
+    }
+
+    .container input,
+    .container textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .container .btn {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Large screen responsiveness */
+@media only screen and (min-width: 1024px) {
+    .container {
+        max-width: 700px;
+        padding: 40px;
+    }
+
+    .container h1 {
+        font-size: 1.8em;
+    }
+
+    .container input,
+    .container textarea {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .container .btn {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}

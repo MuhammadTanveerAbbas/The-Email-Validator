@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../src/About-me.jpg" />
+    <title>About Me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 12px;
+            color: white;
+        }
+
+        nav .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav .logo img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav .logo span {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-left: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #808080;
+        }
+
+        .about-section {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .about-section p {
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .copy-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #email {
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            word-break: break-word;
+        }
+
+        .copy-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .copy-btn:hover {
+            background-color: #333;
+        }
+
+        .copy-btn.clicked {
+            background-color: green;
+            transform: scale(1.1);
+        }
+
+        .message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: green;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s ease-in-out;
+        }
+
+        .message.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Mobile responsiveness */
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .about-section {
+                padding: 15px;
+            }
+
+            .about-section h1 {
+                font-size: 1.2em;
+            }
+
+            .about-section p {
+                font-size: 14px;
+            }
+
+            .copy-btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+
+        /* Tablet responsiveness */
+        @media only screen and (max-width: 768px) {
+            .about-section {
+                padding: 20px;
+            }
+
+            .about-section h1 {
+                font-size: 1.5em;
+            }
+
+            .about-section p {
+                font-size: 15px;
+            }
+
+            .copy-btn {
+                padding: 12px 18px;
+                font-size: 14px;
+            }
+        }
+
+        /* Large screen responsiveness */
+        @media only screen and (min-width: 1024px) {
+            .about-section {
+                max-width: 700px;
+                padding: 30px;
+            }
+
+            .about-section h1 {
+                font-size: 1.8em;
+            }
+
+            .about-section p {
+                font-size: 18px;
+            }
+
+            .copy-btn {
+                padding: 15px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="../public/fevicon.jpeg" alt="Logo">
+                    <span>Email Validator</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="./Contact-me.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-section">
+            <h1>About Me</h1>
+            <p>
+                I'm Muhammad Tanveer Abbas, a dedicated Full Stack Web Developer with expertise in the MERN stack. I
+                create sleek, responsive websites and applications focused on delivering excellent user experiences.
+            </p>
+            <p>
+                My passion for technology and problem-solving has driven me to master frontend technologies like HTML,
+                CSS, JavaScript, and backend tools such as Node.js and MongoDB. I’m always eager to learn and stay ahead
+                with the latest trends.
+            </p>
+            <p>If you'd like to connect, you can reach me via email:</p>
+
+            <div class="copy-container">
+                <span id="email">muhammadtanveerabbas.dev@gmail.com</span>
+                <button class="copy-btn" id="copyButton" onclick="copyEmail()">Copy Email</button>
+            </div>
+            <div class="message" id="copyMessage">Email copied to clipboard!</div>
+        </div>
+    </main>
+
+    <footer>
+        &#169; 2024 Muhammad Tanveer Abbas | All Rights Reserved
+    </footer>
+
+    <script>
+        function copyEmail() {
+            const emailText = document.getElementById('email').textContent;
+            const copyButton = document.getElementById('copyButton');
+            const copyMessage = document.getElementById('copyMessage');
+
+            navigator.clipboard.writeText(emailText).then(() => {
+                copyButton.textContent = 'Copied!';
+                copyButton.classList.add('clicked');
+                copyMessage.classList.add('visible');
+
+                setTimeout(() => {
+                    copyButton.textContent = 'Copy Email';
+                    copyButton.classList.remove('clicked');
+                    copyMessage.classList.remove('visible');
+                }, 3000);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
