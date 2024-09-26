@@ -85,6 +85,7 @@
             background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .about-section h1 {
@@ -101,27 +102,22 @@
 
         .copy-container {
             display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        #email {
-            margin-right: 15px;
-            font-weight: bold;
-            font-size: 1rem;
-            word-break: break-word;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         .copy-btn {
             background-color: black;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 15px 40px; /* Increased padding for width */
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
-            font-size: 14px;
+            font-size: 16px;
             text-transform: uppercase;
+            width: 100%; /* Make the button fill the available width */
+            max-width: 300px; /* But limit the max width */
         }
 
         .copy-btn:hover {
@@ -195,7 +191,7 @@
             }
 
             .copy-btn {
-                padding: 10px 15px;
+                padding: 12px 30px; /* Adjust padding for smaller screens */
                 font-size: 14px;
             }
         }
@@ -215,7 +211,7 @@
             }
 
             .copy-btn {
-                padding: 12px 18px;
+                padding: 12px 35px; /* Adjust padding for tablet screens */
                 font-size: 14px;
             }
         }
@@ -236,7 +232,7 @@
             }
 
             .copy-btn {
-                padding: 15px 25px;
+                padding: 15px 50px; /* Increased padding for large screens */
                 font-size: 16px;
             }
         }
@@ -262,19 +258,9 @@
     <main>
         <div class="about-section">
             <h1>About Me</h1>
-            <p>
-                I'm Muhammad Tanveer Abbas, a dedicated Full Stack Web Developer with expertise in the MERN stack. I
-                create sleek, responsive websites and applications focused on delivering excellent user experiences.
-            </p>
-            <p>
-                My passion for technology and problem-solving has driven me to master frontend technologies like HTML,
-                CSS, JavaScript, and backend tools such as Node.js and MongoDB. I’m always eager to learn and stay ahead
-                with the latest trends.
-            </p>
-            <p>If you'd like to connect, you can reach me via email:</p>
-
+            <If>
+                I'm Muhammad Tanveer Abbas,a dedicated Full Stack Web Developer with expertise in the MERN stack.I create sleek,responsive websites and applications focused on delivering excellent user experiences.My passion for technology and problem-solving has driven me to master frontend technologies like HTML,CSS, JavaScript, and backend tools such as Node.js and MongoDB. I’m always eager to learn and stay ahead with the latest trends.If you'd like to connect, feel free to reach out.</p>
             <div class="copy-container">
-                <span id="email">muhammadtanveerabbas.dev@gmail.com</span>
                 <button class="copy-btn" id="copyButton" onclick="copyEmail()">Copy Email</button>
             </div>
             <div class="message" id="copyMessage">Email copied to clipboard!</div>
@@ -287,7 +273,7 @@
 
     <script>
         function copyEmail() {
-            const emailText = document.getElementById('email').textContent;
+            const emailText = 'muhammadtanveerabbas.dev@gmail.com';
             const copyButton = document.getElementById('copyButton');
             const copyMessage = document.getElementById('copyMessage');
 
