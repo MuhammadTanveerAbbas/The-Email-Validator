@@ -12,14 +12,10 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge" height="40" alt="javascript logo"  />
 </div>
 
-
 <h1 align="center">📧 Email Validator</h1>
+<br>
 
-<h2 align="left">🤖 Introduction</h2>
-
-###
-
-<p align="left">This project is a responsive email validation tool that allows users to check the validity of any email address. It fetches email validation details such as format, domain, SMTP status, and whether the email is disposable or registered. The tool is designed with a modern UI and provides a smooth user experience.</p>
+<p align="center">This project is a responsive email validation tool that allows users to check the validity of any email address. It fetches email validation details such as format, domain, SMTP status, and whether the email is disposable or registered. The tool is designed with a modern UI and provides a smooth user experience.</p>
 
 ###
 
@@ -35,7 +31,14 @@
 
 ###
 
-<p align="left">Real-time email validation: Get instant feedback on the email you input.<br>Responsive Design: Fully responsive layout for mobile, tablet, and desktop devices.<br>Use Web3form: for contact form submission.<br>SMTP Check: Verify if the email server is reachable.<br>Disposable Email Detection: Identify disposable email addresses.<br>Error Handling: Graceful handling of API errors with user-friendly messages.</p>
+<p align="left">
+Real-time email validation: Get instant feedback on the email you input.<br> <br>
+Responsive Design: Fully responsive layout for mobile, tablet, and desktop devices.<br> <br> 
+Use Web3form: for contact form submission.<br> <br> 
+SMTP Check: Verify if the email server is reachable.<br> <br> 
+Disposable Email Detection: Identify disposable email addresses.<br> <br> 
+Error Handling: Graceful handling of API errors with user-friendly messages. <br> 
+</p>
 
 ###
 
